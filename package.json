@@ -1,0 +1,24 @@
+{
+  "name": "alejandro-malagon-brainflix-api",
+  "version": "1.0.0",
+  "description": "Brainflix API (Braninflix Sprint 3)",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "Alejandro Malagon Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nescensanecati/alejandro-malagon-brainflix-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nescensanecati/alejandro-malagon-brainflix-api/issues"
+  },
+  "homepage": "https://github.com/nescensanecati/alejandro-malagon-brainflix-api#readme"
+}
