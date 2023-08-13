@@ -3,6 +3,7 @@ const express = require("express");
 const homepageRoutes = require('./routes/homepageRoutes');
 const videosRoutes = require('./routes/videosRoutes');
 const notFoundRoutes = require('./routes/notFoundRoutes');
+const imagesRoute = require ('./routes/imagesRoute');
 
 require('dotenv').config()
 const PORT = process.env.PORT
@@ -20,6 +21,8 @@ app.use(express.json());
 app.use('/', homepageRoutes);
 
 app.use('/videos', videosRoutes);
+
+app.use('/images', imagesRoute);
 
 app.use('/*', notFoundRoutes);
 
