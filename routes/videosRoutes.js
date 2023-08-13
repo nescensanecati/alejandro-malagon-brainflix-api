@@ -53,13 +53,26 @@ router.post("/", (request, response) => {
   const newVideo = {
     "id": crypto.randomUUID(),
     "title": request.body.title,
-    "channel": request.body.channel,
-    "image": request.body.image
+    "channel": "Video Author from API Post",
+    "image": "http://localhost:8000/images/140555ee-1481-4501-b0d1-f0775637a8dd",
+    "description": request.body.description,
+    "views": 0,
+    "likes": 0,
+    "duration": "00:10",
+    "video": "https://project-2-api.herokuapp.com/stream",
+    "timestamp" : Date.now(),
+    "comments": [{
+      "id": crypto.randomUUID(),
+      "name": "Comment author from API Post",
+      "comment": "Comment description from API post",
+      "likes": 0,
+      "timestamp": Date.now()
+    }],
   };
 
-  const videos = readVideosFile();
+  const videos = readVideosDetailsFile();
   videos.push(newVideo);
-  fs.writeFileSync("./data/videos.json", JSON.stringify(videos));
+  fs.writeFileSync("./data/videoDetails.json", JSON.stringify(videos));
   response.status(201).json(newVideo);
 });
 
@@ -71,7 +84,7 @@ router.post("/", (request, response) => {
 //Deleting specific video
 
 router.delete("/:videoId", (req, res) => {
-  const videos = readVideosFile();
+  const videos = readVideosDetailsFile();
   const remainingVideos = videos.filter((video) => {
     return video.id !== req.params.videoId;
   });
