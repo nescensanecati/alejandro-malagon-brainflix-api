@@ -4,13 +4,6 @@ const fs = require('fs');
 const crypto = require('crypto');
 const path = require('path');
 
-
-function readVideosFile() {
-  const videosList = fs.readFileSync('./data/videos.json')
-  const parsedVideosList = JSON.parse(videosList)
-  return parsedVideosList
-}
-
 function readVideosDetailsFile() {
   const videosDetails = fs.readFileSync('./data/videoDetails.json')
   const parsedVideosDetailsList = JSON.parse(videosDetails)
@@ -22,7 +15,7 @@ function readVideosDetailsFile() {
 
 // Getting a list of videos
 router.get('/', function (request, response) {
-  const videos = readVideosFile()
+  const videos = readVideosDetailsFile()
   response.json(videos);
 });
 
