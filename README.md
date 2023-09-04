@@ -20,4 +20,4 @@ This site is using a frontend site that can be checked in the Git repository:
 https://github.com/nescensanecati/alejandro-malagon-brainflix
 
 If you want to see this project deployed and in action, please go to: 
-https://main--wonderful-crepe-91b4e8.netlify.app/
+https://brainflix.alex-diaz.info/
